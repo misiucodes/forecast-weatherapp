@@ -10,30 +10,146 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+  rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+    </style>
+  </style>
+  <script src="https://kit.fontawesome.com/36660f2c78.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div>
+  
+  <header>
     forecast
-  </div>
-  <small>
-    Current Location
-  </small>
-  <div>
-    Toronto, Ontario
-  </div>
-  <h1>
-    The only weather forecast you need
-  </h1>
+  </header>
 
-  <form class="form-inline search-bar">
-    <div class="form-group mx-sm-3 mb-2">
-      <input type="text" class="form-control" id="search-field" placeholder="Enter a location">
+  
+  <div class="location-wrapper">
+    <div class="location-info">
+      <small>
+        Current Location
+      </small>
+      <h2>
+        Toronto, Ontario
+      </h2>
     </div>
-    <button type="submit" class="btn btn-primary mb-2">
-      Search
-    </button>
-  </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="weather-app-wrapper">
+    <h1>
+      The only weather forecast you need
+    </h1>
+
+    <div class="container search-engine">
+        <form id="search-form">
+            <div class="col">
+              <i class="fas fa-search icon-search"></i>
+              <input 
+                type="search"  
+                class="form-control form-control-lg opacity-50"
+                autocomplete="off"
+                placeholder="Enter a city..."/>
+            </div>
+        </form>
+    </div>
+
+<div class="line-break"></div>
+
+<div class="forecast-wrapper">
+
+<h7>Today</h7>
+
+ <div class="current-location-info">
+      <div class="row">
+        <div class="col-6">
+          <h3 class="city">Toronto, Ontario</h3>
+          <div class="clearfix">
+              <i class="fas fa-cloud-sun icon-currentweather"></i>
+              <span class="float-left current-temp"><strong>12°</strong></span>
+          </div>
+          <h4 class="date">Tuesday, January 4, 2022</h4>
+        </div>
+        <div class="col-6">
+          <div class="windspeed">Windspeed: km/h</div>
+          <div class="humidity">Humidity:%</div>
+        </div>
+      </div>
+  </div>
+
+    <div class="container weekly-forecast-wrapper">
+
+      <h6>Weekly Forecast</h6>
+
+      <div class="row">
+
+      <div class="col-2 weekday-forecast">
+
+        <div class="col weekday">Mon</div>
+        <img src="img/sun.png" class="forecast-icon" width="80px"/>
+        
+        <div class="weekly-temps">
+          <span class="temp-max">-1 / </span>
+          <span class="temp-min"> 2</span>
+        </div>
+      </div>
+
+      <div class="col-2 weekday-forecast">
+      
+        <div class="col weekday">Tue</div>
+        <img src="img/sun.png" class="forecast-icon" width="80px" />
+      
+        <div class="weekly-temps">
+          <span class="temp-max">-1 / </span>
+          <span class="temp-min"> 2</span>
+        </div>
+      </div>
+    
+      <div class="col-2 weekday-forecast">
+      
+        <div class="weekday">Wed</div>
+        <img src="img/sun.png" class="forecast-icon" width="80px" />
+      
+        <div class="weekly-temps">
+          <span class="temp-max">-1 / </span>
+          <span class="temp-min"> 2</span>
+        </div>
+      </div>
+
+      <div class="col-2 weekday-forecast">
+          
+        <div class="weekday">Thu</div>
+        <img src="img/sun.png" class="forecast-icon" width="80px" />
+          
+        <div class="weekly-temps">
+          <span class="temp-max">-1 / </span>
+          <span class="temp-min"> 2</span>
+        </div>
+      </div>
+
+      <div class="col-2 weekday-forecast">
+              
+        <div class="weekday">Fri</div>
+        <img src="img/sun.png" class="forecast-icon" width="80px" />
+              
+        <div class="weekly-temps">
+          <span class="temp-max">-1 / </span>
+          <span class="temp-min"> 2</span>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+  </div>
+   
+  </div>
+</div>
 
 </body>
 </html>
