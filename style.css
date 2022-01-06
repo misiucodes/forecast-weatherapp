@@ -107,7 +107,7 @@ h7 {
   display: inline-block;
   vertical-align: top;
   line-height: 1;
-  font-family: 'Be Vietnam Pro', sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
   height: 72px;
   width: 84px;
   margin-top: 5px;
@@ -177,8 +177,9 @@ input::placeholder {
   font-weight: 600;
 }
 
-.windspeed, .humidity {
-  font-family: font-family: "Montserrat", sans-serif;
+.windspeed,
+.humidity {
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   letter-spacing: 1px;
 }
