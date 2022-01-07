@@ -86,7 +86,7 @@ h7 {
   padding: 28px 0 5px 0 !important;
 }
 
-.clearfix .temp-description {
+.temp-description {
   margin-top: 5px auto 2px auto;
   font-size: 15px;
   font-weight: 600;
@@ -94,23 +94,23 @@ h7 {
   letter-spacing: 1px;
 }
 
-.clearfix span {
-  font-size: 38px;
-  margin-left: -4px;
+.current-temp {
+  font-size: 64px;
+  margin-left: -1px;
   font-weight: 400;
-  line-height: 58px;
+  line-height: 72px;
+  display: inline-block;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
-.current-temp {
-  font-size: 65px;
-  font-weight: 500;
+.degree {
+  color: #e8eaed;
   display: inline-block;
+  font-size: 30px;
+  line-height: 38px;
+  margin-top: 6px;
+  padding-left: 6px;
   vertical-align: top;
-  line-height: 1;
-  font-family: "Be Vietnam Pro", sans-serif;
-  height: 72px;
-  width: 84px;
-  margin-top: 5px;
 }
 
 .icon-cloudy {
@@ -118,6 +118,7 @@ h7 {
   vertical-align: top;
   height: 76px;
   width: 80px;
+  margin-right: 1px;
 }
 
 .icon-search {
@@ -142,6 +143,16 @@ input::placeholder {
   height: 7px;
   margin: 30px auto;
   top: 20px;
+}
+
+.temp-description {
+  text-transform: capitalize;
+}
+
+.temp-max,
+.temp-min {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
 }
 
 .weather-app-wrapper {
@@ -177,10 +188,15 @@ input::placeholder {
   font-weight: 600;
 }
 
+.weekly-temps {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 .windspeed,
 .humidity {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 

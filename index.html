@@ -65,112 +65,27 @@
     </div>
 
     <div class="clearfix">
-        <img src="img/partly_cloudy.png" id="currentWeatherIcon" class="icon-cloudy" />
-        <div id="current-temp" class="current-temp">12</div><span class="degree">°</span>
-        <div id="temp-desscription" class="temp-description">Partly Cloudy</div>
-    </div>
+        <img src="img/partly_cloudy.png" id="currentWeatherIcon" class="float-left icon-cloudy" />
+        <div id="current-temp" class="current-temp">12</div><div class="degree">°</div>
+      </div>
+        <div id="temp-description" class="temp-description">Partly Cloudy</div>
     
     <div class="row justify-content-evenly">
       <div class="col windhum">
-        <span class="windspeed"><strong>Windspeed:</strong> km/h </span> |
-        <span class="humidity"><strong>Humidity:</strong> %</span>
+        <span id="windspeed" class="windspeed"><strong>Windspeed: </strong><span id="windspeed-units">km/h </span>  |
+        <span id="humidity" class="humidity"><strong>Humidity:</strong> <span id="humidity-units">%</span>
       </div>
     </div>
   </div>
 </div>
 
-    <div class="container weekly-forecast-wrapper">
+  <div class="container weekly-forecast-wrapper">
 
-      <h6>Weekly Forecast</h6>
+    <h6>Weekly Forecast</h6>
 
-      <div class="row d-flex justify-content-evenly">
-
-        <div class="col weather-forecast-box">
-
-          <div class="weather-forecast-date">Mon</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px"/>
-          
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
-        <div class="col weather-forecast-box">
+    <div id="forecast">
       
-          <div class="weather-forecast-date">Tue</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-        
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-    
-        <div class="col weather-forecast-box">
-      
-          <div class="weather-forecast-date">Wed</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-        
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
-        <div class="col weather-forecast-box">
-          
-          <div class="weather-forecast-date">Thu</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-            
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
-        <div class="col weather-forecast-box">
-              
-          <div class="weather-forecast-date">Fri</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-                
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
-        <div class="col weather-forecast-box">
-        
-          <div class="weather-forecast-date">Sat</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-        
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
-        <div class="col weather-forecast-box">
-        
-          <div class="weather-forecast-date">Sun</div>
-          <img src="img/sun.png" class="forecast-icon" width="80px" />
-        
-          <div class="weekly-temps">
-            <span class="temp-max">-1 / </span>
-            <span class="temp-min"> 2</span>
-            <div class="weather-forecast-description">Cloudy</div>
-          </div>
-        </div>
-
     </div>
-   </div>
    
    <br />
     <br />
