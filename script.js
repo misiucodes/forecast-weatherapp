@@ -33,6 +33,12 @@ function showCitySearched(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", showCitySearched);
 
+function getForecast(coordinates) {
+  let apiKey = "ef1f6e14d39c4aa8875abd79b5398d89";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   let showTemp = document.querySelector("#current-temp");
   let temperature = Math.round(response.data.main.temp);
@@ -49,33 +55,50 @@ function showTemperature(response) {
   currentWeatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   
   celciusTemperature = response.data.main.temp;
-  console.log(response);
+
+  getForecast(response.data.coord);
 }
 
-function displayForecast () {
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
-
   let forecastHTML = `<div class="row d-flex justify-content-evenly">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
     forecastHTML = forecastHTML + 
-    `
+    ` 
     <div class="col">
-      <div class="weather-forecast-date">${day}</div>
-      <img src="img/sun.png" class="forecast-icon" width="80px"/>
+      <div class="weather-forecast-date">${formatForecastDay(forecastDay.dt)}</div>
+ 
+      <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+       width="80px"/>
           
         <div class="weekly-temps">
-          <span class="temp-max">-1 / </span>
-          <span class="temp-min"> 2</span>
+          <span class="temp-max">${Math.round(forecastDay.temp.max)}°  </span>
+          <span class="temp-min"> ${Math.round(forecastDay.temp.min)}° </span>
         <div class="weather-forecast-description">Cloudy</div>
       </div>
     </div>
     `;
+     }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
-displayForecast ();
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  return days[day];
+}
+
+
+
+
+
