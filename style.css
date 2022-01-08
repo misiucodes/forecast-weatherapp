@@ -188,6 +188,10 @@ input::placeholder {
   font-weight: 600;
 }
 
+.weather-forecast-description {
+  text-transform: capitalize;
+}
+
 .weekly-temps {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;

@@ -65,12 +65,12 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row d-flex justify-content-evenly">`;
+  let forecastHTML = `<d iv class="row d-flex justify-content-evenly">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
     forecastHTML = forecastHTML + 
     ` 
-    <div class="col">
+    <div class="col sm justify-content-evenly">
       <div class="weather-forecast-date">${formatForecastDay(forecastDay.dt)}</div>
  
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
@@ -79,7 +79,7 @@ function displayForecast(response) {
         <div class="weekly-temps">
           <span class="temp-max">${Math.round(forecastDay.temp.max)}°  </span>
           <span class="temp-min"> ${Math.round(forecastDay.temp.min)}° </span>
-        <div class="weather-forecast-description">Cloudy</div>
+        <div class="weather-forecast-description">${forecastDay.weather[0].description}</div>
       </div>
     </div>
     `;
@@ -105,10 +105,10 @@ function showPositionTemp(position) {
   axios.get(apiEndPoint).then(showTemperature);
 }
 
-
 function getPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPositionTemp);
+  displayForecast();
 }
   let button = document.querySelector("#btn-location");
   button.addEventListener("click", getPosition);
