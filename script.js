@@ -98,6 +98,21 @@ function formatForecastDay(timestamp) {
   return days[day];
 }
 
+function showPositionTemp(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ef1f6e14d39c4aa8875abd79b5398d89&units=metric`;
+  axios.get(apiEndPoint).then(showTemperature);
+}
+
+
+function getPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPositionTemp);
+}
+  let button = document.querySelector("#btn-location");
+  button.addEventListener("click", getPosition);
+
 
 
 
