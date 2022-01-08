@@ -32,6 +32,8 @@ function showCitySearched(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", showCitySearched);
+let searchElement = document.querySelector("#icon-search")
+searchElement.addEventListener("click", showCitySearched);
 
 function getForecast(coordinates) {
   let apiKey = "ef1f6e14d39c4aa8875abd79b5398d89";
@@ -70,7 +72,7 @@ function displayForecast(response) {
     if (index < 6) {
     forecastHTML = forecastHTML + 
     ` 
-    <div class="col sm justify-content-evenly">
+    <div class="col-sm-4 justify-content-evenly">
       <div class="weather-forecast-date">${formatForecastDay(forecastDay.dt)}</div>
  
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
@@ -104,6 +106,8 @@ function showPositionTemp(position) {
   let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ef1f6e14d39c4aa8875abd79b5398d89&units=metric`;
   axios.get(apiEndPoint).then(showTemperature);
 }
+
+
 
 function getPosition(event) {
   event.preventDefault();

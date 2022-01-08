@@ -67,6 +67,25 @@ h7 {
   margin-left: 11px;
 }
 
+.btn-location {
+  padding: 20px 18px 20px 37px;
+  border-radius: 12px;
+  color: white;
+  background-color: rgba(44, 44, 44, 0.8);
+  float: right;
+  border: none;
+}
+
+.icon-gps {
+  position: relative;
+  float: right;
+  color: white;
+  font-size: 20px;
+  left: -212px;
+  top: 23px;
+  display: inline-block;
+}
+
 .current-location-wrapper {
   background-color: rgb(255, 251, 251, 0.2);
   border-radius: 30px;

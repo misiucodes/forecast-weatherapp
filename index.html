@@ -30,7 +30,10 @@
   forecast
 </header>
 
-<button id="btn-location">Find my current location</button>
+<div class="find-location">
+  <i class="fas fa-map-marker-alt icon-gps"></i>
+  <button class="btn-location" id="btn-location">Find my current location</button>
+</div>
 
 <div class="container left">
   <div class="weather-app-wrapper">
@@ -41,7 +44,7 @@
     <div class="container search-engine">
         <form id="search-form">
             <div class="col">
-              <i class="fas fa-search icon-search"></i>
+              <i class="fas fa-search icon-search" id="icon-search"></i>
               <input 
                 id="search-input"
                 type="search"  
