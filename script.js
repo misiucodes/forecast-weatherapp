@@ -19,6 +19,16 @@ function showCurrentDateTime() {
 
 showCurrentDateTime();
 
+function search(city) {
+  let apiKey = "ef1f6e14d39c4aa8875abd79b5398d89";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+search("Toronto");
+
 function showCitySearched(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -59,6 +69,7 @@ function showTemperature(response) {
   celciusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
+  console.log(response);
 }
 
 function displayForecast(response) {
@@ -67,12 +78,12 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<d iv class="row d-flex justify-content-evenly">`;
+  let forecastHTML = `<div class="row d-flex justify-content-evenly">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
     forecastHTML = forecastHTML + 
     ` 
-    <div class="col-sm-4 justify-content-evenly">
+    <div class="col-sm col-md col-md-lg justify-content-evenly">
       <div class="weather-forecast-date">${formatForecastDay(forecastDay.dt)}</div>
  
       <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
@@ -106,8 +117,6 @@ function showPositionTemp(position) {
   let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ef1f6e14d39c4aa8875abd79b5398d89&units=metric`;
   axios.get(apiEndPoint).then(showTemperature);
 }
-
-
 
 function getPosition(event) {
   event.preventDefault();
