@@ -114,7 +114,8 @@ function formatForecastDay(timestamp) {
 function showPositionTemp(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ef1f6e14d39c4aa8875abd79b5398d89&units=metric`;
+  let apiKey = "ef1f6e14d39c4aa8875abd79b5398d89";
+  let apiEndPoint = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiEndPoint).then(showTemperature);
 }
 
