@@ -24,12 +24,12 @@ h1 {
   margin: 220px auto 0 auto !important;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: 3vw;
 }
 
 h2 {
   font-family: "Source Sans Pro", sans-serif !important;
-  font-size: 13px !important;
+  font-size: 3vw !important;
   font-weight: 200 !important;
   padding: 30px auto;
 }
@@ -74,8 +74,12 @@ button {
   background-color: rgba(44, 44, 44, 0.8);
   left: 110px !important;
   border: none;
-  font-size: 10px !important;
+  font-size: 11px !important;
   display: inline-block;
+}
+
+input[type="search" i] {
+  text-indent: 33px;
 }
 
 .icon-gps {
@@ -150,9 +154,9 @@ button {
   font-size: 24px;
   color: white;
   top: 36px;
-  right: 15px;
+  right: -15px;
   position: relative;
-  float: right;
+  float: left;
 }
 
 input::placeholder {
