@@ -7,7 +7,7 @@ body {
 
 img.bg {
   width: auto;
-  height: auto;
+  max-height: auto;
 }
 
 header {
@@ -21,10 +21,10 @@ header {
 
 h1 {
   color: white;
-  margin: 220px auto 0 auto !important;
+  margin: 144px auto 0 auto !important;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 h2 {
@@ -92,11 +92,9 @@ input[type="search" i] {
   display: inline-block;
 }
 
-.current-location-wrapper {
-  background-color: rgb(255, 251, 251, 0.3);
-  border-radius: 30px;
-  margin-top: 6%;
-  padding: 20px 18px;
+.clearfix {
+  display: inline-block;
+  padding: 28px 0 5px 0 !important;
 }
 
 .current-location-info {
@@ -106,17 +104,11 @@ input[type="search" i] {
   text-align: center;
 }
 
-.clearfix {
-  display: inline-block;
-  padding: 28px 0 5px 0 !important;
-}
-
-.temp-description {
-  margin-top: 5px auto 2px auto;
-  font-size: 15px;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 1px;
+.current-location-wrapper {
+  background-color: rgb(255, 251, 251, 0.3);
+  border-radius: 7px;
+  margin-top: 6%;
+  padding: 20px 18px;
 }
 
 .current-temp {
@@ -176,9 +168,19 @@ input::placeholder {
 
 .link-github {
   position: relative;
+  display: block;
+  bottom: -43px;
+  text-align: left;
+  font-size: 8px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .temp-description {
+  margin-top: 5px auto 2px auto;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
   text-transform: capitalize;
 }
 
@@ -194,7 +196,7 @@ input::placeholder {
 }
 
 .weekly-forecast-wrapper {
-  margin-top: 10%;
+  margin-top: 7%;
   color: white;
   text-align: center;
 }
@@ -243,4 +245,19 @@ input::placeholder {
 
 .row {
   --bs-gutter-x: -1.5rem;
+}
+
+.footer {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-align: center !important;
+  display: block;
+  margin-top: 12px;
+  letter-spacing: 1px;
+}
+
+a {
+  color: pink;
+  text-decoration: none;
 }
